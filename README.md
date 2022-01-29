@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Dineth Siriwardana
 - 👀 I’m interested in Programming
-- 🌱 I’m currently learning ICT in Ruhuna
+- 🌱 I’m currently studying for a ICT degree in University of Ruhuna
 - 💞️ I’m looking to collaborate on programmers
 - 📫 You can reach me with info@dineth.me
 
