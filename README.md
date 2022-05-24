@@ -6,7 +6,7 @@
 </p>
 
 
-<br>
+
 
 <p align="center"> 
 	<img src="https://komarev.com/ghpvc/?username=dinethsiriwardana&label=Profile%20views&color=0e75b6&style=plastic" alt="7oSkaaa" /> 
@@ -92,7 +92,7 @@
 
   <summary><b>⚡ Recent GitHub Activity</b></summary>
   <br/>
-   <a href="https://github.com/dinethsiriwardana"><img alt="Dineth's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=dinethsiriwardana&custom_title=7oSkaaa's%20Contribution%20Graph&theme=react-dark" /></a>
+   <a href="https://github.com/dinethsiriwardana"><img alt="Dineth's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=dinethsiriwardana&custom_title=Dineth's%20Contribution%20Graph&theme=react-dark" /></a>
   <br/>
 
 
@@ -100,5 +100,3 @@
 
 
 Credits: [7oSkaaa](https://github.com/7oSkaaa)
-
-Last Edited on: 10/02/2022
