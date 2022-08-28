@@ -10,15 +10,13 @@
 
 <p align="center"> 
 	<img src="https://komarev.com/ghpvc/?username=dinethsiriwardana&label=Profile%20views&color=0e75b6&style=plastic" alt="7oSkaaa" /> 
-	<a href = "https://commits.top/egypt.html" target="_blank">
-		<img src="https://enfsgag3ayy6w9q.m.pipedream.net/&style=plastic" alt="7oSkaaa" target="_blank"/> 
-	</a>
+
 </p>
 
 
 ## :sassy_man:  About me
 - :school: I am a `Undergraduate` at Faculty of Technology, Universicy of Ruhuna
-- :trophy: Wait for BICT
+- :trophy: Wait for `BICT`
 - :technologist: Like to see every problem as `Ones` and `Zeros`
 - :nerd_face: Always `learning new things`
 
@@ -81,7 +79,7 @@
 	<br>
 	  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=dinethsiriwardana&langs_count=10&show_icons=true&locale=en&layout=compact&theme=algolia" alt="7oSkaaa" height="192px"/>
   <br/>
-  <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+ 
   </p>
 
 ----
@@ -95,4 +93,4 @@
 <br/>
 
 
-Credits: [7oSkaaa](https://github.com/7oSkaaa)
+My Lovely Credits: [7oSkaaa](https://github.com/7oSkaaa)
