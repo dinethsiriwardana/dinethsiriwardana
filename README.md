@@ -24,8 +24,8 @@
 
 
 ## :sassy_man:  About me
-- :school: I am a `Undergraduate` at Faculty of Technology, Universicy of Ruhuna
-- :trophy: Wait for `BICT`
+- :school: I am a `BICT Undergraduate` at Faculty of Technology, University of Ruhuna
+- :trophy: Postman Student Leader | α MLSA
 - :technologist: Like to see every problem as `Ones` and `Zeros`
 - :nerd_face: Always `learning new things`
 
