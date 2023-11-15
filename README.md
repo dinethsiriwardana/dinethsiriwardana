@@ -25,13 +25,14 @@
 
 ## :sassy_man:  About me
 - :school: I am a `BICT Undergraduate` at Faculty of Technology, University of Ruhuna
-- :trophy: Postman Student Leader | β MLSA
+- :trophy: Postman Student Leader <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/898ba877-c35c-46f3-9ff8-454adf8783c3" width="15" height="15"> | β MLSA <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/08ce044d-cb2f-4c64-9bb4-55077aa4048d" width="17" height="15">
 - :technologist: Like to see every problem as `Ones` and `Zeros`
 - :nerd_face: Always `learning new things`
 
 <br>
 
 <br>
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
