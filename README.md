@@ -33,12 +33,14 @@
   <img src="https://skillicons.dev/icons?i=dart,java,python,c,cpp,cs,js,php,ts,go" />
 </p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=flutter,spring,laravel,bootstrap,react,dotnet,express,nodejs" />
+  <img src="https://skillicons.dev/icons?i=flutter,spring,laravel,bootstrap,react,dotnet,express,nodejs,nextjs" />
 </p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=firebase,mysql,mongodb,postgresql,sqlite,nextjs" />
+  <img src="https://skillicons.dev/icons?i=firebase,mysql,mongodb,postgresql,sqlite" />
 </p>
-
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=docker,postman,azure" />
+</p>
 
 
 <br>
@@ -46,12 +48,15 @@
 ## 📊 GitHub Stats
 
 <details open>
-  <summary><b>📈 Click to see my Stats</b></summary>
+  <summary><b>📈 Click to see my Stats</b></summary> 
   <br />
   <p align="center">
-    <a href="https://github.com/anuraghazra/github-readme-stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=dinethsiriwardana&show_icons=true&count_private=true&theme=algolia" alt="Dineth's GitHub Stats" />
-    </a>
+   
+  <img src="https://github-readme-stats.vercel.app/api?username=dinethsiriwardana&show_icons=true&count_private=true&theme=algolia" alt="Dineth's GitHub Stats" height="200"/>   &nbsp; 
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dinethsiriwardana&langs_count=6&layout=compact&theme=algolia" height="200"/>
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=@dinethsiriwardana&langs_count=6&theme=algolia&layout=compact" height="200"/>
+    
+ 
 
   
   </p>
@@ -69,3 +74,4 @@
 ---
 
 ⭐ Credits: [7oSkaaa](https://github.com/7oSkaaa)
+ <a href="https://github.com/anuraghazra/github-readme-stats"> Stats </a>
