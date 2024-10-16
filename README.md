@@ -52,8 +52,8 @@
   <br />
   <p align="center">
    
-  <img src="https://github-readme-stats.vercel.app/api?username=dinethsiriwardana&show_icons=true&count_private=true&theme=algolia" alt="Dineth's GitHub Stats" height="200"/>   &nbsp; 
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dinethsiriwardana&langs_count=6&layout=compact&theme=algolia" height="200"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=dinethsiriwardana&show_icons=true&count_private=true&theme=algolia" alt="Dineth's GitHub Stats" height="237"/>   &nbsp; 
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dinethsiriwardana&langs_count=6&layout=compact&theme=algolia" height="237"/>
   <img src="https://github-readme-stats.vercel.app/api/wakatime?username=@dinethsiriwardana&langs_count=6&theme=algolia&layout=compact" height="200"/>
     
  
