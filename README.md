@@ -36,7 +36,7 @@
   <img src="https://skillicons.dev/icons?i=flutter,spring,laravel,bootstrap,react,dotnet,express,nodejs" />
 </p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=firebase,mysql,mongodb,postgresql,sqlite" />
+  <img src="https://skillicons.dev/icons?i=firebase,mysql,mongodb,postgresql,sqlite,nextjs" />
 </p>
 
 
