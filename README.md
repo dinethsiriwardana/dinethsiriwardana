@@ -20,6 +20,7 @@
 
 ## 🤓 About Me
 
+- 👨‍💻 Software Engineer @ ProDigit
 - 🎓 BICT Undergraduate @ University of Ruhuna, Faculty of Technology
 - 🏆 Postman Student Leader &nbsp; <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/898ba877-c35c-46f3-9ff8-454adf8783c3" width="15" height="15"> &nbsp; | &nbsp; β MLSA &nbsp; <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/08ce044d-cb2f-4c64-9bb4-55077aa4048d" width="17" height="15">
 - 💻 I view every problem as a series of `Ones` and `Zeros`.
