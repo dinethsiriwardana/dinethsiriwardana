@@ -20,7 +20,7 @@
 
 ## 🤓 About Me
 
-- 👨‍💻 Software Engineer
+- 👨‍💻 Mobile Engineer @ Majstro
 - 🎓 BICT Undergraduate @ University of Ruhuna, Faculty of Technology
 - 🏆 Postman Student Leader &nbsp; <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/898ba877-c35c-46f3-9ff8-454adf8783c3" width="15" height="15"> &nbsp; | &nbsp; Gold Microsoft SA &nbsp; <img src="https://github.com/user-attachments/assets/e8689026-7bff-47cd-bddf-63ef9eaacdee" width="17" height="15">
 
@@ -54,7 +54,6 @@
    
   <img src="https://github-readme-stats.vercel.app/api?username=dinethsiriwardana&show_icons=true&count_private=true&theme=algolia" alt="Dineth's GitHub Stats" height="237"/>   &nbsp; 
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dinethsiriwardana&langs_count=6&layout=compact&theme=algolia" height="237"/>
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=@dinethsiriwardana&langs_count=6&theme=algolia&layout=compact" height="200"/>
     
  
 
