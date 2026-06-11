@@ -22,7 +22,7 @@
 
 - 👨‍💻 Mobile Engineer @ Majstro
 - 🎓 BICT Undergraduate @ University of Ruhuna, Faculty of Technology
-- 🏆 Postman Student Leader &nbsp; <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/898ba877-c35c-46f3-9ff8-454adf8783c3" width="15" height="15"> &nbsp; | &nbsp; Gold Microsoft SA &nbsp; <img src="https://github.com/user-attachments/assets/e8689026-7bff-47cd-bddf-63ef9eaacdee" width="17" height="15">
+- 🏆 Postman Student Leader &nbsp; <img src="https://github.com/dinethsiriwardana/dinethsiriwardana/assets/91774218/898ba877-c35c-46f3-9ff8-454adf8783c3" width="15" height="15"> &nbsp; | &nbsp; Ex; Gold Microsoft SA &nbsp; <img src="https://github.com/user-attachments/assets/e8689026-7bff-47cd-bddf-63ef9eaacdee" width="17" height="15">
 
 
 <br>
