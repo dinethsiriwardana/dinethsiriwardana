@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/dinethsiriwardana/dinethsiriwardana">
-    <img src="https://img.shields.io/github/stars/dinethsiriwardana/dinethsiriwardana?style=social" alt="Star Badge"/>
+<img src="https://img.shields.io/badge/⭐_Star_Me-grey?style=for-the-badge&logo=github&logoColor=white&labelColor=black" alt="Star Me Button"/>
   </a>
 </p>
 
