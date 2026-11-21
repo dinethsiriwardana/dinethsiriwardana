@@ -53,9 +53,16 @@
 
 <br>
 
-## 🕸️ Skills Graph — drag to rotate, scroll to zoom
+## 🕸️ Skills Graph
 
-> 🖱️ **Live 3D model**: left-drag to rotate · scroll to zoom · right-drag to pan. Big node = me, medium = categories (Languages · Frameworks · Databases · Tools), small = skills, lines = how they connect.
+<p align="center">
+  <img src="assets/orbit-graph.svg" alt="Animated 3D graph of my skills" width="100%"/>
+</p>
+
+<details>
+<summary><b>🖱️ Want to grab it? Open the drag-to-rotate 3D model</b></summary>
+
+> Left-drag to rotate · scroll to zoom · right-drag to pan
 
 ```stl
 solid graph
@@ -8994,7 +9001,8 @@ endfacet
 endsolid graph
 ```
 
-<p align="center"><sub>Want labels and colours? <a href="https://dinethsiriwardana.github.io/dinethsiriwardana/">Open the full-colour version →</a></sub></p>
+<p align="center"><sub><a href="https://dinethsiriwardana.github.io/dinethsiriwardana/">Full-colour interactive version →</a></sub></p>
+</details>
 
 <br>
 
