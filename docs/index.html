@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dineth's Knowledge Graph</title>
+<style>
+  html,body{margin:0;height:100%;background:#161420;color:#d4d0e8;font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;overflow:hidden}
+  #graph{position:fixed;inset:0}
+  .panel{position:fixed;background:rgba(38,35,53,.85);backdrop-filter:blur(6px);border:1px solid #3a3650;border-radius:10px;padding:10px 14px;font-size:13px}
+  #title{top:14px;left:14px}
+  #title b{font-size:15px;color:#fff}
+  #title div{opacity:.7;margin-top:2px;font-size:12px}
+  #legend{bottom:14px;left:14px}
+  #legend span{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 6px 0 10px;vertical-align:middle}
+  #legend span:first-child{margin-left:0}
+  #info{top:14px;right:14px;min-width:170px;max-width:240px;display:none}
+  #info h3{margin:0 0 6px;color:#fff;font-size:15px}
+  #info .tag{display:inline-block;background:#3a3650;border-radius:20px;padding:2px 9px;margin:2px 2px 0 0;font-size:12px;cursor:pointer}
+  #info .tag:hover{background:#524c75}
+  #btns{bottom:14px;right:14px;display:flex;gap:8px}
+  button{background:#3a3650;color:#fff;border:0;border-radius:7px;padding:6px 12px;cursor:pointer;font-size:13px}
+  button:hover{background:#524c75}
+  button.on{background:#7c3aed}
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="title" class="panel"><b>🕸️ Dineth's Knowledge Graph</b><div>Drag nodes · scroll to zoom · click a node to focus</div></div>
+<div id="info" class="panel"></div>
+<div id="legend" class="panel"></div>
+<div id="btns" class="panel"><button id="b3" class="on">3D</button><button id="b2">2D</button><button id="reset">Reset</button></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three-spritetext@1.8.2/dist/three-spritetext.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.73.4/dist/3d-force-graph.min.js"></script>
+<script>
+// ---- Edit this data to change the graph --------------------------------
+const clusters = {
+  "Languages":  {color:"#a78bfa", items:["Dart","Java","Python","C","C++","C#","JavaScript","PHP","TypeScript","Go"]},
+  "Frameworks": {color:"#60a5fa", items:["Flutter","Spring","Laravel","Bootstrap","React","Express",".NET","Next.js","Node.js"]},
+  "Databases":  {color:"#34d399", items:["Firebase","MySQL","MongoDB","PostgreSQL","SQLite"]},
+  "Tools":      {color:"#fbbf24", items:["Docker","Postman","Azure"]}
+};
+const cross = [["Dart","Flutter"],["Java","Spring"],["PHP","Laravel"],["JavaScript","React"],["JavaScript","Node.js"],
+  ["Node.js","Express"],["React","Next.js"],["TypeScript","Next.js"],["C#",".NET"],["Flutter","Firebase"],
+  ["Spring","MySQL"],["Laravel","MySQL"],["Node.js","MongoDB"],["Express","MongoDB"],["Spring","PostgreSQL"],
+  ["Flutter","SQLite"],["Docker","Spring"],["Docker","Node.js"],["Azure",".NET"],["Postman","Express"],
+  ["Python","Docker"],["JavaScript","TypeScript"],["C","C++"],["Go","Docker"],["Bootstrap","Laravel"]];
+// ------------------------------------------------------------------------
+
+const nodes = [{id:"Dineth", kind:"me", color:"#f472b6", val:14}], links = [];
+for (const [c, d] of Object.entries(clusters)) {
+  nodes.push({id:c, kind:"hub", color:d.color, val:8});
+  links.push({source:"Dineth", target:c});
+  for (const it of d.items) { nodes.push({id:it, kind:c, color:d.color, val:2}); links.push({source:c, target:it}); }
+}
+for (const [a,b] of cross) links.push({source:a, target:b});
+
+const nb = {}; nodes.forEach(n => nb[n.id] = new Set());
+links.forEach(l => { nb[l.source].add(l.target); nb[l.target].add(l.source); });
+nodes.forEach(n => { if (n.kind !== "me" && n.kind !== "hub") n.val = 2 + nb[n.id].size * 0.6; });
+
+document.getElementById("legend").innerHTML =
+  Object.entries(clusters).map(([c,d]) => `<span style="background:${d.color}"></span>${c}`).join("") +
+  `<span style="background:#f472b6"></span>Me`;
+
+let sel = null, hover = null, hl = new Set(), hlLinks = new Set();
+const isHl = n => !sel && !hover || hl.has(n.id);
+const lk = l => (typeof l.source === "object" ? l.source.id : l.source) + "|" + (typeof l.target === "object" ? l.target.id : l.target);
+
+function setHighlight(n) {
+  hl.clear(); hlLinks.clear();
+  if (n) { hl.add(n.id); nb[n.id].forEach(x => hl.add(x)); links.forEach(l => { if (hl.has(l.source.id) && hl.has(l.target.id) && (l.source.id === n.id || l.target.id === n.id)) hlLinks.add(l); }); }
+}
+function refresh() {
+  nodes.forEach(n => {
+    const o = n.__threeObj; if (!o) return;
+    const on = isHl(n), c = on ? n.color : "#3b3852";
+    o.children[0].material.color.set(c);
+    o.children[1].material.color.set(c); o.children[1].material.opacity = on ? 0.14 : 0.03;
+    o.children[2].color = on ? "#ffffff" : "#6d6a85";
+  });
+  Graph.linkColor(Graph.linkColor()).linkWidth(Graph.linkWidth()).linkDirectionalParticles(Graph.linkDirectionalParticles());
+}
+
+const Graph = ForceGraph3D()(document.getElementById("graph"))
+  .backgroundColor("#161420")
+  .graphData({nodes, links})
+  .nodeRelSize(4)
+  .nodeVal("val")
+  .nodeLabel(n => `${n.id}`)
+  .nodeThreeObject(n => {
+    const g = new THREE.Group();
+    const r = Math.cbrt(n.val) * 4;
+    const on = isHl(n);
+    g.add(new THREE.Mesh(new THREE.SphereGeometry(r, 20, 20), new THREE.MeshBasicMaterial({color: on ? n.color : "#3b3852"})));
+    g.add(new THREE.Mesh(new THREE.SphereGeometry(r * 1.7, 20, 20), new THREE.MeshBasicMaterial({color: on ? n.color : "#3b3852", transparent: true, opacity: on ? 0.14 : 0.03, depthWrite: false})));
+    const s = new SpriteText(n.id);
+    s.color = on ? "#ffffff" : "#6d6a85";
+    s.textHeight = n.kind === "me" ? 6 : n.kind === "hub" ? 4.5 : 3.2;
+    s.fontWeight = (n.kind === "me" || n.kind === "hub") ? "bold" : "normal";
+    s.position.y = -(r + 5);
+    g.add(s);
+    return g;
+  })
+  .nodeThreeObjectExtend(false)
+  .linkColor(l => hlLinks.has(l) ? "#ffffff" : (sel || hover ? "#2b283d" : "#8b87a8"))
+  .linkOpacity(0.5)
+  .linkWidth(l => hlLinks.has(l) ? 1.6 : 0.4)
+  .linkDirectionalParticles(l => hlLinks.has(l) ? 3 : 0)
+  .linkDirectionalParticleWidth(2)
+  .onNodeHover(n => { hover = n || null; if (!sel) { setHighlight(hover); refresh(); } document.body.style.cursor = n ? "pointer" : "default"; })
+  .onNodeClick(n => focus(n))
+  .onBackgroundClick(() => { sel = null; setHighlight(null); refresh(); info.style.display = "none"; });
+
+Graph.d3Force("charge").strength(-120);
+
+const info = document.getElementById("info");
+function focus(n) {
+  sel = n; setHighlight(n); refresh();
+  const dist = 90, r = 1 + dist / Math.hypot(n.x || 1, n.y || 1, n.z || 1);
+  Graph.cameraPosition({x:n.x*r, y:n.y*r, z:n.z*r}, n, 900);
+  info.style.display = "block";
+  info.innerHTML = `<h3>${n.id}</h3><div style="opacity:.7;margin-bottom:6px">${n.kind === "me" ? "That's me" : n.kind === "hub" ? "Category" : n.kind}</div>` +
+    `<div>Connected to ${nb[n.id].size}:</div>` + [...nb[n.id]].map(x => `<span class="tag" data-id="${x}">${x}</span>`).join("");
+  info.querySelectorAll(".tag").forEach(t => t.onclick = () => focus(nodes.find(m => m.id === t.dataset.id)));
+}
+
+const b3 = document.getElementById("b3"), b2 = document.getElementById("b2");
+b3.onclick = () => { Graph.numDimensions(3); b3.classList.add("on"); b2.classList.remove("on"); };
+b2.onclick = () => { Graph.numDimensions(2); b2.classList.add("on"); b3.classList.remove("on"); Graph.cameraPosition({x:0,y:0,z:330}, {x:0,y:0,z:0}, 700); };
+document.getElementById("reset").onclick = () => { sel = null; setHighlight(null); refresh(); info.style.display = "none"; Graph.zoomToFit(800, 40); };
+setTimeout(() => Graph.zoomToFit(800, 20), 2500);
+addEventListener("resize", () => Graph.width(innerWidth).height(innerHeight));
+</script>
+</body>
+</html>

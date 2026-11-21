@@ -53,6 +53,18 @@
 
 <br>
 
+## 🕸️ Knowledge Graph
+
+<p align="center">
+  <a href="https://dinethsiriwardana.github.io/dinethsiriwardana/">
+    <img src="assets/obsidian-graph.svg" alt="Obsidian-style graph of my skills" width="100%"/>
+  </a>
+  <br/>
+  <b><a href="https://dinethsiriwardana.github.io/dinethsiriwardana/">▶ Open the interactive 3D graph</a></b> — drag, zoom and click nodes
+</p>
+
+<br>
+
 ## 📊 GitHub Stats
 
 <details open>
